@@ -5,9 +5,21 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/planets',
     name: 'Home',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Home.vue')
+    component: () => import('@/views/Home.vue'),
+    children: [
+      {
+        path: ':id',
+        name: 'Id',
+        component: () => import('@/components/PlanetCard.vue')
+      }
+    ]
+  },
+  {
+    path: '/gallery',
+    name: 'Gallery',
+    component: () => import('@/views/Gallery.vue')
   }
 ]
 

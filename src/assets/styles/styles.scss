@@ -1,0 +1,165 @@
+$main-color: #87556F;
+$second-color: #59405C;
+$second-color-darken: #322F3D;
+$third-color: #4B5D67;
+$text-color: #e0e0e0;
+/*--------------------------------------------------------------*/
+// COMMON STYLES
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    padding: 0;
+    margin: 0;
+    color: $text-color;
+}
+#main{
+    position: relative;
+}
+
+.btn{
+    background-color: $second-color;
+    &:hover, &:active, &:focus{
+        background-color: $main-color;
+    }
+}
+
+.btn-groupe{
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+}
+
+.m-10{
+    margin: 10px;
+}
+
+.active-link{
+    font-size: 20px !important;
+}
+
+.app-loader-container{
+    position: absolute;
+    top: 20%;
+    left: 40px;
+    z-index: 22;
+}
+/*--------------------------------------------------------------*/
+// HEADER
+.navbar-block {
+    padding: 0 30px;
+    background-color: $main-color;
+    color: $text-color;
+    & a:hover {
+        background-color: $second-color;
+    }
+}
+
+#nav-mobile{
+    padding-left: 60px;
+}
+
+.app-menu i{ 
+    margin: 0 20px;
+}
+
+/*--------------------------------------------------------------*/
+// SIDE-PANEL
+.sidenav-block {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    height: auto;
+    padding: 20px 0;
+
+    background-color: $third-color;
+    & li > a {
+        color: $text-color;
+        &:hover{
+            background-color: $main-color;
+        }
+    }
+
+}
+
+.open {
+    transform: translate(0);
+}
+
+.full{
+    padding-left: 20px !important;
+}
+
+.input-field {
+    padding: 20px;
+}
+
+.app-input {
+    color: $text-color !important;
+    text-transform: uppercase;
+}
+
+/*--------------------------------------------------------------*/
+// CONTENT
+
+.content {
+    position: relative;
+    min-height: 100vh;
+    background: url("../src/assets/img/main-bg.jpg") no-repeat;
+    background-size: cover;
+    color: $text-color;
+    &-container {
+        padding: 20px;
+        padding-left: 25%;
+    }
+    &-card {
+        width: 350px;
+        padding: 10px;
+        margin: 0 10px;
+        background-color: $third-color;
+        border-radius: 5px;
+    }
+}
+
+.cards-container{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.more-btn{
+    line-height: 2px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.info{
+    &-title{
+        font-style: 28px;
+        padding-bottom: 15px;
+    }
+    &-text{
+        padding-bottom: 10px;
+        & span{
+            font-weight: bold;
+            padding-right: 10px;
+        }
+    }
+}
+
+.btn-close{
+    float: right;
+    background: transparent;
+    color: $text-color;
+    cursor: pointer;
+    &:hover{
+        color: $second-color;
+    }
+}
+
+/*--------------------------------------------------------------*/
+// FOOTER
+
+/*--------------------------------------------------------------*/
