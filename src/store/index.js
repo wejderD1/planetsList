@@ -18,6 +18,9 @@ export default new Vuex.Store({
     'CLEAR_PLANETS_DATA' (state) {
       state.planets = {}
     },
+    'CLEAR_PLANET' (state) {
+      state.planet = {}
+    },
     'SET_PLANETS_LIST' (state, planets) {
       state.planets = planets
     },
@@ -44,11 +47,16 @@ export default new Vuex.Store({
         return
       }
       state.pageNumber--
+    },
+    'DEFAULT_PAGE' (state) {
+      state.pageNumber = 1
     }
   },
   getters: {
     planets: state => state.planets,
-    planet: state => state.planet
+    planet: state => state.planet,
+    pageNumber: state => state.pageNumber
+
   },
   actions: {
     async getPlanetsData (context) {

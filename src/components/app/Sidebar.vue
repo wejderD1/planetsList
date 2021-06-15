@@ -2,9 +2,7 @@
   <div>
     <Loader v-if="load" />
     <ul v-else class="sidenav sidenav-block open">
-      <li v-for="(item, index) in planetsList" :key="index">
-        <a @click="search(item)">{{ item.name }}</a>
-      </li>
+      <li v-for="(item, index) in planetsList" :key="index"><a @click="search(item)">{{ item.name }}</a></li>
       <div class="btn-groupe">
         <button class="btn m-10" @click="handlePrev">
           PREV
@@ -34,7 +32,7 @@ export default {
       return src.match(/\d/gi).join('')
     },
     async search (item) {
-      this.$router.replace('/planets/' + this.getId(item.url))
+      this.$router.push('/planets/' + this.getId(item.url))
       await this.$store.dispatch('getPlanetFromId', this.getId(item.url))
     },
     handleNext () {

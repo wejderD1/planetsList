@@ -5,21 +5,28 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/planets',
-    name: 'Home',
+    path: '/',
+    name: 'home',
     component: () => import('@/views/Home.vue'),
     children: [
       {
-        path: ':id',
-        name: 'Id',
+        path: '/planets/:id',
+        name: 'id',
         component: () => import('@/components/PlanetCard.vue')
       }
     ]
   },
   {
     path: '/gallery',
-    name: 'Gallery',
+    name: 'gallery',
     component: () => import('@/views/Gallery.vue')
+  },
+  {
+    path: '/404',
+    component: () => import('@/views/NotFound.vue')
+  },
+  {
+    path: '*', redirect: '/404'
   }
 ]
 

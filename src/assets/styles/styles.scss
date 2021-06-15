@@ -16,7 +16,7 @@ p {
     margin: 0;
     color: $text-color;
 }
-#main{
+#app{
     position: relative;
 }
 
@@ -79,6 +79,7 @@ p {
     & li > a {
         color: $text-color;
         &:hover{
+            cursor: pointer;
             background-color: $main-color;
         }
     }
@@ -116,7 +117,7 @@ p {
         padding-left: 25%;
     }
     &-card {
-        width: 350px;
+        width: 100%;
         padding: 10px;
         margin: 0 10px;
         background-color: $third-color;
@@ -125,6 +126,7 @@ p {
 }
 
 .cards-container{
+    width: 70%;
     display: flex;
     justify-content: flex-start;
 }
@@ -149,16 +151,40 @@ p {
     }
 }
 
-.btn-close{
-    float: right;
-    background: transparent;
-    color: $text-color;
-    cursor: pointer;
-    &:hover{
-        color: $second-color;
-    }
+/*--------------------------------------------------------------*/
+// GALLERY
+.filter-panel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $second-color;
+}
+#climate{
+    display: inline-block;
+    width: 300px;
+    border: 1px solid $third-color; 
+    border-radius: 5px;
+    color: $third-color;
+    margin: 10px;
 }
 
+/*--------------------------------------------------------------*/
+// PLANETLIST
+.planets-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.full-data-container{
+    width: 80%;
+    border: $second-color-darken 1px solid;
+    border-radius: 5px;
+    background-color: $third-color;
+    padding: 20px;
+    margin: 10px 0;
+}
 /*--------------------------------------------------------------*/
 // FOOTER
 
